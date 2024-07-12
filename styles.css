@@ -1,0 +1,132 @@
+/* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: url("bg.jpg") no-repeat center center/cover;
+}
+
+.hero {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+button {
+	padding: 15px 30px;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	color: white;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	margin-bottom: 15px;
+}
+
+button:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background: rgba(255, 255, 255, 0.1);
+	margin: 10% auto;
+	border: none;
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+	width: 80%;
+	max-width: 500px;
+	color: white;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+}
+
+form div {
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.div2 {
+	display: flex;
+	justify-content: left;
+	width: 100%;
+}
+
+label {
+	display: flex;
+	margin-bottom: 5px;
+	width: 100%;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 10px 30px;
+	margin-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+}
+
+.error {
+	color: #ff6666;
+	font-size: 0.9em;
+}
+
+@media only screen and (max-width: 600px) {
+	.modal-content {
+		width: 90%;
+		padding: 15px;
+	}
+
+	button {
+		font-size: 1.2em;
+		padding: 10px 20px;
+	}
+
+	input, 
+	textarea {
+		padding: 10px;
+		font-size: 1em;
+	}
+}
